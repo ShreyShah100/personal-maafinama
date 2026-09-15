@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorry Cutuu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #bbb;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 80px;
+    }
+
+    button {
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #55d98b;
+      color: #111;
+      margin-right: 10px;
+    }
+
+    #no {
+      background: #2b2b2b;
+      color: white;
+      position: fixed;
+    }
+
+    #message {
+      display: none;
+      margin-top: 25px;
+      font-size: 24px;
+      color: #55d98b;
+      font-weight: bold;
+    }
+
+    #small {
+      display: none;
+      color: #ddd;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>System Error: Cutuu is mad at Shrey 🥲</h1>
+
+    <p>
+      Rebooting brain cells...<br>
+      Please accept this apology patch.<br><br>
+      Sorry baby, galti thai gai ❤️
+    </p>
+
+    <div class="buttons" id="buttons">
+      <button id="yes">Forgive Shrey ❤️</button>
+      <button id="no">Still Mad 😤</button>
+    </div>
+
+    <div id="message">Patch Accepted ✅❤️</div>
+    <div id="small">
+      Thank you cutuu 😭❤️<br>
+      I know just saying sorry is not enough.<br>
+      I'll show it properly through my actions too.
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const buttons = document.getElementById("buttons");
+
+    function moveNoButton() {
+      const padding = 10;
+
+      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+      const x = Math.random() * (maxX - padding) + padding;
+      const y = Math.random() * (maxY - padding) + padding;
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    noBtn.addEventListener("mouseenter", moveNoButton);
+
+    noBtn.addEventListener("click", function () {
+      alert("Error: Invalid choice 😭 try the other button!");
+      moveNoButton();
+    });
+
+    yesBtn.addEventListener("click", function () {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("small").style.display = "block";
+      buttons.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
